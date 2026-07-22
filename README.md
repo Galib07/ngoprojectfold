@@ -1,10 +1,10 @@
 # NgoProjectFold
 
-**One shared PowerShell command** for three departments — MEAL,
-Business Development, and Project Management — that creates a
+**One shared PowerShell command** for three NGO departments - MEAL,
+Business Development, and Project Management - that creates a
 customized project folder structure through a dialog box.
 
-Developed by **Asadullah All Galib** (galib.ihe.du.bd@gmail.com)
+Developed by **Asadullah All Galib** (galib.ihe.du.bd@gmail.com) (https://github.com/Galib07)
 
 ## The one command
 
@@ -16,14 +16,14 @@ That's the only command anyone needs to remember. A dialog box opens
 where each person:
 
 - picks **their own department** from a dropdown (MEAL,
-  Business_Development, or Project_Management) — the folder list
+  Business_Development, or Project_Management) - the folder list
   instantly switches to that department's own structure
 - confirms/changes the project name, path, author, and email
 - ticks/unticks any folder they don't need
 - adds their own new master folder, or a new sub-folder inside any
   existing folder (old or newly added)
 
-No department flag on the command line — the dialog handles it.
+No department flag on the command line - the dialog handles it.
 
 ### Auto-serial numbering
 
@@ -173,3 +173,4 @@ Properties → Security).
 
 **Asadullah All Galib**
 galib.ihe.du.bd@gmail.com
+https://github.com/Galib07
