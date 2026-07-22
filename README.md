@@ -18,9 +18,9 @@ Instead of manually creating dozens of folders (Admin, Budget, Reports, etc.) ev
 
 ---
 
-## 🚀 Quick Start (one time only)
+## 🚀 Start & Installation (one time only)
 
-Open **PowerShell** and paste this one line:
+Open **PowerShell** on your PC, copy and paste the following command, then press Enter
 
 ```powershell
 irm https://raw.githubusercontent.com/Galib07/ngoprojectfold/main/Install.ps1 | iex
