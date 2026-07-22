@@ -172,7 +172,7 @@ New-ProjectFolder -Path "D:\NGO\Projects" -ProjectName "ProjectX" -Department Bu
 
 ## 🔒 A note on sensitive folders
 
-A few MEAL folders — `Safeguarding_and_PSEA`, `Beneficiary_Database`, `Data_Protection_and_Consent` - may hold personal or sensitive information. This tool can create folders, but it **cannot** set Windows permissions. If any of these are created, you'll see a reminder inside `ProjectInfo.txt` to manually restrict access:
+A few MEAL folders - `Safeguarding_and_PSEA`, `Beneficiary_Database`, `Data_Protection_and_Consent` - may hold personal or sensitive information. This tool can create folders, but it **cannot** set Windows permissions. If any of these are created, you'll see a reminder inside `ProjectInfo.txt` to manually restrict access:
 right-click the folder → **Properties** → **Security**.
 
 ---
