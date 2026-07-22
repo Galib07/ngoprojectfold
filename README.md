@@ -2,7 +2,7 @@
 
 **One simple command creates all your project folders automatically** - built for three NGO teams: **MEAL**, **Business Development**, and **Project Management**.
 
-👨‍💻 Developed by **[Asadullah All Galib](https://github.com/Galib07)** — galib.ihe.du.bd@gmail.com
+👨‍💻 Developed by **[Asadullah All Galib](https://github.com/Galib07)** - galib.ihe.du.bd@gmail.com
 
 ---
 
@@ -14,7 +14,7 @@ Instead of manually creating dozens of folders (Admin, Budget, Reports, etc.) ev
 2. ✅ Tick the folders you want (or leave everything ticked)
 3. 📁 Click **Create Folders**
 
-...and your entire project folder structure is built in one second — correctly numbered, every time. No technical knowledge needed.
+...and your entire project folder structure is built in one second - correctly numbered, every time. No technical knowledge needed.
 
 ---
 
@@ -26,7 +26,7 @@ Open **PowerShell** and paste this one line:
 irm https://raw.githubusercontent.com/Galib07/ngoprojectfold/main/Install.ps1 | iex
 ```
 
-That's it. The setup window opens automatically — no extra steps.
+That's it. The setup window opens automatically - no extra steps.
 
 > ⚠️ If you see a red "execution policy" error instead, paste this once, press **Y**, then run the line above again:
 > ```powershell
@@ -55,9 +55,9 @@ New-ProjectFolder -Path "D:\NGO\Projects"
 
 ## 🔢 Automatic numbering - no gaps, ever
 
-You never have to think about numbers. Folders are just named things like `Budget` or `Monitoring_Reports` behind the scenes — when you click **Create Folders**, they're automatically numbered `01_`, `02_`, `03_`... based on what's ticked.
+You never have to think about numbers. Folders are just named things like `Budget` or `Monitoring_Reports` behind the scenes - when you click **Create Folders**, they're automatically numbered `01_`, `02_`, `03_`... based on what's ticked.
 
-So if you untick folder #3 out of 5, you still get a clean `01, 02, 03, 04` — never a gap like `01, 02, 04, 05`. This works for sub-folders too, and for anything you add yourself.
+So if you untick folder #3 out of 5, you still get a clean `01, 02, 03, 04` - never a gap like `01, 02, 04, 05`. This works for sub-folders too, and for anything you add yourself.
 
 ---
 
@@ -144,7 +144,7 @@ Closeout
 ```
 </details>
 
-💡 Want to change any of these? Edit `$Script:DepartmentStructures` near the top of `NgoProjectFold.psm1`. No numbers needed there — the tool numbers everything automatically.
+💡 Want to change any of these? Edit `$Script:DepartmentStructures` near the top of `NgoProjectFold.psm1`. No numbers needed there - the tool numbers everything automatically.
 
 ---
 
@@ -152,17 +152,13 @@ Closeout
 
 #### 📌 Current version
 
-📝 **v2.0.0** — July 2026 — one shared command for all 3 departments, department dropdown, auto-numbering, add-your-own-folder buttons — [View this version](https://github.com/Galib07/ngoprojectfold/releases/tag/v2.0.0)
-
-#### 📚 Previous versions
-
-📝 **v1.0.0** — July 2026 — first version, MEAL department only — [View this version](https://github.com/Galib07/ngoprojectfold/releases/tag/v1.0.0)
+📝 **v1.0.0** - July 2026 - one shared command for all 3 departments, department dropdown, auto-numbering, add-your-own-folder buttons: [View this version](https://github.com/Galib07/ngoprojectfold/releases/tag/v1.0.0)
 
 > 🔖 **Maintainer tip:** each time you release a meaningfully new version, create a matching [GitHub Release](https://github.com/Galib07/ngoprojectfold/releases/new) tagged `vX.Y.Z`, and add a row above linking to it. This keeps every past version browsable, the same way this table already assumes.
 
 ---
 
-## 🛠️ Advanced usage (optional — most people can skip this)
+## 🛠️ Advanced usage (optional - most people can skip this)
 
 Skip the dialog box entirely and create the full default structure right away:
 
@@ -176,7 +172,7 @@ New-ProjectFolder -Path "D:\NGO\Projects" -ProjectName "ProjectX" -Department Bu
 
 ## 🔒 A note on sensitive folders
 
-A few MEAL folders — `Safeguarding_and_PSEA`, `Beneficiary_Database`, `Data_Protection_and_Consent` — may hold personal or sensitive information. This tool can create folders, but it **cannot** set Windows permissions. If any of these are created, you'll see a reminder inside `ProjectInfo.txt` to manually restrict access:
+A few MEAL folders — `Safeguarding_and_PSEA`, `Beneficiary_Database`, `Data_Protection_and_Consent` - may hold personal or sensitive information. This tool can create folders, but it **cannot** set Windows permissions. If any of these are created, you'll see a reminder inside `ProjectInfo.txt` to manually restrict access:
 right-click the folder → **Properties** → **Security**.
 
 ---
