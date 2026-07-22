@@ -154,8 +154,6 @@ Closeout
 
 📝 **v1.0.0** - July 2026 - one shared command for all 3 departments, department dropdown, auto-numbering, add-your-own-folder buttons: [View this version](https://github.com/Galib07/ngoprojectfold/releases/tag/ProjectManagement)
 
-> 🔖 **Maintainer tip:** each time you release a meaningfully new version, create a matching [GitHub Release](https://github.com/Galib07/ngoprojectfold/releases/new) tagged `vX.Y.Z`, and add a row above linking to it. This keeps every past version browsable, the same way this table already assumes.
-
 ---
 
 ## 🛠️ Advanced usage (optional - most people can skip this)
