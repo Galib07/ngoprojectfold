@@ -152,7 +152,7 @@ Closeout
 
 #### 📌 Current version
 
-📝 **v1.0.0** - July 2026 - one shared command for all 3 departments, department dropdown, auto-numbering, add-your-own-folder buttons: [View this version](https://github.com/Galib07/ngoprojectfold/releases/tag/ProjectManagement)
+📝 **v1.0.0** - July 2026 [View this version](https://github.com/Galib07/ngoprojectfold/releases/tag/ProjectManagement)
 
 ---
 
