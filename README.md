@@ -1,45 +1,75 @@
-# NgoProjectFold
+# 📂 NgoProjectFold
 
-**One shared PowerShell command** for three NGO departments - MEAL,
-Business Development, and Project Management - that creates a
-customized project folder structure through a dialog box.
+**One simple command creates all your project folders automatically** - built for three NGO teams: **MEAL**, **Business Development**, and **Project Management**.
 
-Developed by **Asadullah All Galib** (galib.ihe.du.bd@gmail.com) (https://github.com/Galib07)
+👨‍💻 Developed by **[Asadullah All Galib](https://github.com/Galib07)** — galib.ihe.du.bd@gmail.com
 
-## The one command
+---
+
+## ✨ What does this do?
+
+Instead of manually creating dozens of folders (Admin, Budget, Reports, etc.) every time you start a new project, you run **one command**. A small window pops up, you:
+
+1. 🏢 Pick your **department** (MEAL / Business Development / Project Management)
+2. ✅ Tick the folders you want (or leave everything ticked)
+3. 📁 Click **Create Folders**
+
+...and your entire project folder structure is built in one second — correctly numbered, every time. No technical knowledge needed.
+
+---
+
+## 🚀 Quick Start (one time only)
+
+Open **PowerShell** and paste this one line:
+
+```powershell
+irm https://raw.githubusercontent.com/Galib07/ngoprojectfold/main/Install.ps1 | iex
+```
+
+That's it. The setup window opens automatically — no extra steps.
+
+> ⚠️ If you see a red "execution policy" error instead, paste this once, press **Y**, then run the line above again:
+> ```powershell
+> Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
+> ```
+
+**From then on**, you never need that install line again - just open PowerShell and type:
 
 ```powershell
 New-ProjectFolder -Path "D:\NGO\Projects"
 ```
 
-That's the only command anyone needs to remember. A dialog box opens
-where each person:
+---
 
-- picks **their own department** from a dropdown (MEAL,
-  Business_Development, or Project_Management) - the folder list
-  instantly switches to that department's own structure
-- confirms/changes the project name, path, author, and email
-- ticks/unticks any folder they don't need
-- adds their own new master folder, or a new sub-folder inside any
-  existing folder (old or newly added)
+## 🧭 How it works
 
-No department flag on the command line - the dialog handles it.
+| Step | What you see | What you do |
+|---|---|---|
+| 1️⃣ | A dropdown labeled **Department** | Choose MEAL, Business_Development, or Project_Management |
+| 2️⃣ | Project name & folder location boxes | Type a name, click **Browse...** to pick where |
+| 3️⃣ | A list of folders, all ticked by default | Untick anything you don't need |
+| 4️⃣ | "+ New Master Folder" / "+ New Sub-folder" buttons | Add your own folders if something's missing |
+| 5️⃣ | **Create Folders** button | Click it - done! |
 
-### Auto-serial numbering
+---
 
-Folder names are stored without numbers. Numbers (`01_`, `02_`,
-`03_` ...) are added automatically when folders are created, counting
-only what's ticked — so unticking one folder never leaves a gap
-(e.g. ticking 4 out of 5 still gives you a clean `01-02-03-04`). This
-applies at every level, including anything added by hand.
+## 🔢 Automatic numbering - no gaps, ever
 
-## Default folder structures
+You never have to think about numbers. Folders are just named things like `Budget` or `Monitoring_Reports` behind the scenes — when you click **Create Folders**, they're automatically numbered `01_`, `02_`, `03_`... based on what's ticked.
 
-**MEAL**
+So if you untick folder #3 out of 5, you still get a clean `01, 02, 03, 04` — never a gap like `01, 02, 04, 05`. This works for sub-folders too, and for anything you add yourself.
+
+---
+
+## 🗂️ What folders does each department get?
+
+<details>
+<summary><strong>🟢 MEAL</strong> (click to expand)</summary>
+
 ```
 Admin
   Project_Proposal, ToRs_and_Contracts
-  Project_Design/ Concept_and_Proposal, Logframe, ToC
+  Project_Design → Concept_and_Proposal, Logframe, ToC
   DIP_and_Gantt_Chart, Workplan, Budget, Ethics_and_IRB,
   Procurement_Requests, Meeting_Minutes, Correspondence
 Monitoring
@@ -55,7 +85,7 @@ Learning
   Learning_Events, Beneficiary_Feedback
 Data_Management
   Tools_and_Forms, Raw_Data, Clean_Data, Code_and_Syntax,
-  Analysis/ Data, Output_Tables, Output_Figures,
+  Analysis → Data, Output_Tables, Output_Figures,
   Beneficiary_Database, Data_Protection_and_Consent, Supplementary_Data
 Reporting
   Donor_Reports, Internal_Reports, Event_Reports,
@@ -63,8 +93,11 @@ Reporting
 Communications_and_Visibility
   Banners_and_Posters, Media_and_Photos
 ```
+</details>
 
-**Business_Development**
+<details>
+<summary><strong>🔵 Business Development</strong> (click to expand)</summary>
+
 ```
 Admin
   Team_ToRs_and_Job_Descriptions, Meeting_Minutes, Correspondence
@@ -84,8 +117,11 @@ Communications_and_Branding
 Reporting
   Pipeline_Tracker, Win_Loss_Analysis, Internal_BD_Reports
 ```
+</details>
 
-**Project_Management**
+<details>
+<summary><strong>🟠 Project Management</strong> (click to expand)</summary>
+
 ```
 Admin
   Project_Charter, ToRs_and_Contracts, Meeting_Minutes, Correspondence
@@ -106,71 +142,47 @@ Risk_and_Issue_Management
 Closeout
   Handover_Documents, Final_Report, Asset_Disposal
 ```
+</details>
 
-Edit `$Script:DepartmentStructures` near the top of
-`NgoProjectFold.psm1` any time to change any of these three
-structures. Don't add numbers in there — the script numbers folders
-automatically at creation time.
+💡 Want to change any of these? Edit `$Script:DepartmentStructures` near the top of `NgoProjectFold.psm1`. No numbers needed there — the tool numbers everything automatically.
 
-## Install and run (one line, one time)
+---
 
-Open PowerShell and run:
+## 🗃️ Versions
 
-```powershell
-irm https://raw.githubusercontent.com/Galib07/ngoprojectfold/main/Install.ps1 | iex
-```
+#### 📌 Current version
 
-This automatically:
-- downloads the module into your personal PowerShell Modules folder
-- sets up your PowerShell profile so it loads automatically every
-  time you open PowerShell in the future
-- **immediately opens the folder-setup dialog box in that same
-  window** — no closing/reopening PowerShell, no second command
+📝 **v2.0.0** — July 2026 — one shared command for all 3 departments, department dropdown, auto-numbering, add-your-own-folder buttons — [View this version](https://github.com/Galib07/ngoprojectfold/releases/tag/v2.0.0)
 
-If PowerShell blocks the command with an execution-policy error, run
-this once, then confirm with `Y`, then run the install line again:
-```powershell
-Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
-```
+#### 📚 Previous versions
 
-From the next time onward, you don't need the install line at all —
-just open PowerShell and run:
-```powershell
-New-ProjectFolder -Path "D:\NGO\Projects"
-```
+📝 **v1.0.0** — July 2026 — first version, MEAL department only — [View this version](https://github.com/Galib07/ngoprojectfold/releases/tag/v1.0.0)
 
-### Advanced (optional): skip the dialog
+> 🔖 **Maintainer tip:** each time you release a meaningfully new version, create a matching [GitHub Release](https://github.com/Galib07/ngoprojectfold/releases/new) tagged `vX.Y.Z`, and add a row above linking to it. This keeps every past version browsable, the same way this table already assumes.
+
+---
+
+## 🛠️ Advanced usage (optional — most people can skip this)
+
+Skip the dialog box entirely and create the full default structure right away:
 
 ```powershell
 New-ProjectFolder -Path "D:\NGO\Projects" -ProjectName "ProjectX" -Department Business_Development -NoGui
 ```
-(`-Department` accepts `MEAL`, `Business_Development`, or `Project_Management`.)
 
-## Publishing / updating this repository (maintainer only)
+`-Department` accepts `MEAL`, `Business_Development`, or `Project_Management`.
 
-1. Create a Public GitHub repository named `ngoprojectfold`.
-2. Upload these five files to it: `NgoProjectFold.psm1`,
-   `NgoProjectFold.psd1`, `Install.ps1`, `README.md`, `LICENSE`.
-3. Share this one line with the team:
-   ```
-   irm https://raw.githubusercontent.com/Galib07/ngoprojectfold/main/Install.ps1 | iex
-   ```
-4. To update later, edit `NgoProjectFold.psm1` and re-upload it with
-   the same filename (overwrite). Team members just re-run the same
-   install line to get the update.
+---
 
-## Sensitive folders
+## 🔒 A note on sensitive folders
 
-`Safeguarding_and_PSEA`, `Beneficiary_Database`, and
-`Data_Protection_and_Consent` (MEAL department) may hold personally
-identifiable or highly sensitive information. The script can only
-create folders, not set Windows permissions — if any of these are
-created, a reminder is written into `ProjectInfo.txt` inside the
-project folder to manually restrict access (right-click the folder →
-Properties → Security).
+A few MEAL folders — `Safeguarding_and_PSEA`, `Beneficiary_Database`, `Data_Protection_and_Consent` — may hold personal or sensitive information. This tool can create folders, but it **cannot** set Windows permissions. If any of these are created, you'll see a reminder inside `ProjectInfo.txt` to manually restrict access:
+right-click the folder → **Properties** → **Security**.
 
-## Developer
+---
+
+## 👤 Developer
 
 **Asadullah All Galib**
-galib.ihe.du.bd@gmail.com
-https://github.com/Galib07
+📧 galib.ihe.du.bd@gmail.com
+🔗 [github.com/Galib07](https://github.com/Galib07)
