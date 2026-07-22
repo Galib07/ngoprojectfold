@@ -1,5 +1,5 @@
 @{
-    RootModule        = 'NgoProjectFold.psm1'
+    RootModule         = 'NgoProjectFold.psm1'
     ModuleVersion      = '2.0.0'
     GUID               = 'b3e2b5b0-6a1f-4b8a-9a2b-5c1e7d6f8a90'
     Author             = 'Asadullah All Galib'
