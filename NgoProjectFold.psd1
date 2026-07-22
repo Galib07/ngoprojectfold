@@ -13,7 +13,7 @@
     AliasesToExport    = @()
     PrivateData = @{
         PSData = @{
-            Tags = @('NGO', 'MEAL', 'ProjectManagement', 'BusinessDevelopment', 'FolderStructure')
+            Tags = @('NGO', 'MEAL', 'ProjectManagement', 'BusinessDevelopment', 'ProjectFolder', 'FolderStructure')
             ProjectUri = 'https://github.com/Galib07/ngoprojectfold'
         }
     }
