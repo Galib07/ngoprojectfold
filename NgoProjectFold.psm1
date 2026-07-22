@@ -339,7 +339,7 @@ function Show-ProjectFolderDialog {
     $rowHeight    = 32
 
     $form                 = New-Object System.Windows.Forms.Form
-    $form.Text            = "NgoProjectFold - Project Folder Setup for NGO Professionals"
+    $form.Text            = "NgoProjectFold - Project Folder Setup"
     $form.Size            = New-Object System.Drawing.Size(600, 730)
     $form.StartPosition   = "CenterScreen"
     $form.FormBorderStyle = "FixedDialog"
@@ -435,14 +435,19 @@ function Show-ProjectFolderDialog {
     $treeView.Size = New-Object System.Drawing.Size(550, 380)
     $treeView.CheckBoxes = $true
 
-    function Sync-TreeToDepartment([string]$Department) {
+    # NOTE: this must be a scriptblock stored in a variable, not a
+    # nested "function" - .GetNewClosure() below only captures
+    # variables, not locally-defined functions, so a nested function
+    # here would go out of scope by the time the event actually fires.
+    $syncTreeToDepartment = {
+        param([string]$Department)
         $treeView.Nodes.Clear()
         Build-FolderTreeNodes -Collection $treeView.Nodes -Tree $Script:DepartmentStructures[$Department]
         $treeView.ExpandAll()
     }
-    Sync-TreeToDepartment $cmbDept.SelectedItem
+    & $syncTreeToDepartment $cmbDept.SelectedItem
 
-    $cmbDept.Add_SelectedIndexChanged({ Sync-TreeToDepartment $cmbDept.SelectedItem }.GetNewClosure())
+    $cmbDept.Add_SelectedIndexChanged({ & $syncTreeToDepartment $cmbDept.SelectedItem }.GetNewClosure())
 
     $treeView.Add_AfterCheck({
         param($sender, $e)
