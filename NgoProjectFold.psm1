@@ -339,7 +339,7 @@ function Show-ProjectFolderDialog {
     $rowHeight    = 32
 
     $form                 = New-Object System.Windows.Forms.Form
-    $form.Text            = "NgoProjectFold - Project Folder Setup"
+    $form.Text            = "NgoProjectFold - Project Folder Setup for NGO Professionals"
     $form.Size            = New-Object System.Drawing.Size(600, 730)
     $form.StartPosition   = "CenterScreen"
     $form.FormBorderStyle = "FixedDialog"
